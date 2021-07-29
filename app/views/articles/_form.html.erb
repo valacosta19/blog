@@ -1,0 +1,18 @@
+<%= form_with(model: @article, local: true) do |form| %> 
+<%# en base al article va a llenar la informacion de dentro del form %>
+    <div> 
+    <%# #de article tomamos titulo %>
+        <%=form.label :title %> 
+        <%=form.text_field :title %> 
+        <%# y este controlador va a llegar lleno con lo que traiga article %>
+    </div>
+
+    <div>
+        <%= form.label :content %>
+        <%= form.rich_text_area :content %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+<%end%>
